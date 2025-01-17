@@ -9,7 +9,7 @@ const outfitList = document.getElementById('outfit-list');
 // Drag and Drop Functionality
 wardrobe.addEventListener('dragstart',  (e)=>{
     if(e.target.classList.contains("clothing-item"))
-      // console.log("dragstarted", e.target.id);
+       console.log("dragstarted", e.target.id);
         e.dataTransfer.setData('text', e.target.id)
     
 
