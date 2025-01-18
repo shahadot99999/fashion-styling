@@ -16,10 +16,14 @@ wardrobe.addEventListener('dragstart',  (e)=>{
 } )
 
 
+// Drag and Drop  mannequin Functionality
 
-mannequin.addEventListener('dragover', (e) => {
+mannequin.addEventListener('dragover', (e)=>{
+    console.log("dragover", e.target.id);
     e.preventDefault();
-});
+})
+
+
 
 mannequin.addEventListener('drop', (e) => {
     e.preventDefault();
