@@ -34,15 +34,25 @@ mannequin.addEventListener('drop', (e) => {
     mannequin.appendChild(clone);
 });
 
-// Filtering Clothes
+
+// Filtering Clothes Listening for Input
 filterInput.addEventListener('input', () => {
+
+    //Fetching Filter Value 
     const filterValue = filterInput.value.toLowerCase();
-    const items = wardrobe.querySelectorAll('.clothing-item');
-    items.forEach((item) => {
+
+    // Selecting Clothing Items
+    const items = wardrobe.querySelectorAll('.clothing-item'); 
+
+     // Iterating Over Items
+    items.forEach((item)=> {
+
+        //Retrieving Item Data
         const itemType = item.dataset.type.toLowerCase();
         const itemColor = item.dataset.color.toLowerCase();
         const itemOccasion = item.dataset.occasion.toLowerCase();
 
+        //Matching Filter Criteria Displaying or Hiding Items
         if (
             itemType.includes(filterValue) ||
             itemColor.includes(filterValue) ||
@@ -52,8 +62,17 @@ filterInput.addEventListener('input', () => {
         } else {
             item.style.display = 'none';
         }
-    });
+        
+    })
 });
+
+
+
+
+
+
+
+
 
 // Save Outfit Functionality
 saveOutfitButton.addEventListener('click', () => {
