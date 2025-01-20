@@ -15,6 +15,14 @@
  
      <!-- Font awesome icon link -->
      <script src="https://kit.fontawesome.com/249647ca07.js" crossorigin="anonymous"></script>
+
+     <!-- Row css -->
+     <style>
+        .heatmap-region:hover {
+          filter: brightness(1.2);
+          transition: filter 0.3s ease;
+        }
+      </style>
 </head>
 <body>
     
@@ -155,12 +163,71 @@
      <!-- AI Fashion Advisor end -->
 
 
+     <!-- Trend Tracker with Heatmap start -->
+     <section>
+        <header class="bg-primary text-white p-4 text-center">
+            <h1 class="text-3xl font-bold">Global Trends Map</h1>
+            <p>Explore trending styles across the globe</p>
+          </header>
+        
+          <main class="container mx-auto py-8">
+            <!-- Search Section -->
+            <div class="mb-8">
+              <label for="search" class="block text-lg font-medium mb-2">Search Trends</label>
+              <input 
+                type="text" 
+                id="search" 
+                class="input input-bordered w-full" 
+                placeholder="Search by country, style, or designer...">
+            </div>
+        
+            <!-- Heatmap Section -->
+            <div class="relative bg-gray-200 rounded-lg shadow-md">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" 
+                alt="World Map" 
+                class="w-full heatmap-image">
+        
+              <!-- Example regions with hover effects -->
+              <div class="absolute top-[30%] left-[40%] heatmap-region bg-red-500 opacity-50 rounded-full w-16 h-16 flex items-center justify-center">
+                <span class="tooltip tooltip-right" data-tip="USA - 120 Trends"></span>
+              </div>
+        
+              <div class="absolute top-[50%] left-[60%] heatmap-region bg-blue-500 opacity-50 rounded-full w-16 h-16 flex items-center justify-center">
+                <span class="tooltip tooltip-left" data-tip="Banglaseh - 95 Trends"></span>
+              </div>
+            </div>
+        
+            <!-- Trends List Section -->
+            <div class="mt-8">
+              <h2 class="text-2xl font-semibold mb-4">Trending Styles</h2>
+              <ul id="trends-list" class="space-y-4">
+                <li class="trend-item card bg-base-100 shadow-md p-4" data-country="USA" data-style="Streetwear" data-designer="John Doe">
+                  <h3 class="font-bold text-lg">Streetwear</h3>
+                  <p>Country: USA | Designer: John Doe</p>
+                </li>
+                <li class="trend-item card bg-base-100 shadow-md p-4" data-country="Banglaseh" data-style="Ethnic" data-designer="Rinku Raj">
+                  <h3 class="font-bold text-lg">Ethnic Wear</h3>
+                  <p>Country: Banglaseh | Designer: Rinku Raj</p>
+                </li>
+                <li class="trend-item card bg-base-100 shadow-md p-4" data-country="France" data-style="Haute Couture" data-designer="Sophie Dupont">
+                  <h3 class="font-bold text-lg">Haute Couture</h3>
+                  <p>Country: France | Designer: Sophie Dupont</p>
+                </li>
+              </ul>
+            </div>
+          </main>
+     </section>
+     <!-- Trend Tracker with Heatmap end -->
+
+
    
 
 
     
      <script src="js/virtualWardrobe.js"></script>
      <script src="js/aIFashionAdvisor.js"></script>
+     <script src="js/trandTrackerMap.js"></script>
 
 </body>
 </html>
