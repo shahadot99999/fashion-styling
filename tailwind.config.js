@@ -6,5 +6,8 @@ module.exports = {
         display: ['group-hover', 'group-focus'],
       },
     },
-    plugins: [],
+    plugins: [require('daisyui')],
+    daisyui: {
+        themes: ['light', 'dark'],
+    },
   }

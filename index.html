@@ -37,9 +37,7 @@
      <!-- navbar end -->
 
      <!-- Virtual Wardrobe Builder start -->
-
-     <section>
-       
+     <section> 
       <div class="flex flex-col items-center p-4">
         <!-- Wardrobe Section -->
         <div class="bg-base-200 p-4 rounded-lg shadow-lg w-full max-w-lg">
@@ -80,10 +78,81 @@
           <div id="outfit-list" class="space-y-4"></div>
         </div>
       </div>
-      
- 
      </section>
      <!-- Virtual Wardrobe Builder end -->
+
+     <!-- AI Fashion Advisor start -->
+   <section class="container mx-auto">
+        <!-- Header Section -->
+        <div class="navbar bg-base-300 shadow-md p-4">
+          <a class="text-xl font-bold">Quiz & Suggestions</a>
+          <div class="ml-auto flex gap-4">
+              <select id="themeSelector" class="select select-bordered">
+                  <option value="light">Light</option>
+                  <option value="dark">Dark</option>
+              </select>
+              <button id="increaseFont" class="btn btn-primary btn-sm">A+</button>
+              <button id="decreaseFont" class="btn btn-primary btn-sm">A-</button>
+          </div>
+      </div>
+  
+      <!-- Main Content -->
+      <div class="max-w-3xl mx-auto mt-8 p-6 bg-base-100 shadow-lg rounded-lg">
+          <h2 class="text-2xl font-bold mb-4">Find Your Perfect Style</h2>
+          <form id="quizForm" class="space-y-4">
+              <!-- Favorite Color -->
+              <div>
+                  <label class="label">
+                      <span class="label-text">What is your favorite color?</span>
+                  </label>
+                  <input type="text" id="favoriteColor" class="input input-bordered w-full" placeholder="e.g., Blue">
+              </div>
+  
+              <!-- Preferred Occasion -->
+              <div>
+                  <label class="label">
+                      <span class="label-text">What's the occasion?</span>
+                  </label>
+                  <select id="occasion" class="select select-bordered w-full">
+                      <option value="casual">Casual</option>
+                      <option value="formal">Formal</option>
+                      <option value="party">Party</option>
+                  </select>
+              </div>
+  
+              <!-- Favorite Style -->
+              <div>
+                  <label class="label">
+                      <span class="label-text">Which style do you prefer?</span>
+                  </label>
+                  <div class="flex gap-2">
+                      <label class="cursor-pointer flex items-center gap-2">
+                          <input type="radio" name="style" value="minimal" class="radio">
+                          <span>Minimal</span>
+                      </label>
+                      <label class="cursor-pointer flex items-center gap-2">
+                          <input type="radio" name="style" value="bold" class="radio">
+                          <span>Bold</span>
+                      </label>
+                      <label class="cursor-pointer flex items-center gap-2">
+                          <input type="radio" name="style" value="elegant" class="radio">
+                          <span>Elegant</span>
+                      </label>
+                  </div>
+              </div>
+  
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary w-full">Get Suggestions</button>
+          </form>
+  
+          <!-- Suggestions Section -->
+          <div id="suggestions" class="mt-8 hidden">
+              <h3 class="text-xl font-bold mb-4">Your Suggestions</h3>
+              <p id="suggestionContent" class="text-lg"></p>
+          </div>
+      </div>
+   </section>
+     <!-- AI Fashion Advisor end -->
 
 
    
@@ -91,6 +160,7 @@
 
     
      <script src="js/virtualWardrobe.js"></script>
+     <script src="js/aIFashionAdvisor.js"></script>
 
 </body>
 </html>
