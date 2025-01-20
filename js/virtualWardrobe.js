@@ -68,12 +68,6 @@ filterInput.addEventListener('input', () => {
 
 
 
-
-
-
-
-
-
 // Save Outfit Functionality
 saveOutfitButton.addEventListener('click', () => {
     const outfitItems = mannequin.querySelectorAll('.clothing-item');
@@ -91,6 +85,7 @@ saveOutfitButton.addEventListener('click', () => {
         outfit.appendChild(clone);
     });
 
+    //remove button here
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
     removeButton.addEventListener('click', () => {
