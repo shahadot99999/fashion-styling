@@ -164,7 +164,7 @@
 
 
      <!-- Trend Tracker with Heatmap start -->
-     <section>
+     <section class="container mx-auto mt-2">
         <header class="bg-primary text-white p-4 text-center">
             <h1 class="text-3xl font-bold">Global Trends Map</h1>
             <p>Explore trending styles across the globe</p>
@@ -178,7 +178,7 @@
                 type="text" 
                 id="search" 
                 class="input input-bordered w-full" 
-                placeholder="Search by country, style, or designer...">
+                placeholder="Search by country, style, or designer">
             </div>
         
             <!-- Heatmap Section -->
@@ -189,11 +189,11 @@
                 class="w-full heatmap-image">
         
               <!-- Example regions with hover effects -->
-              <div class="absolute top-[30%] left-[40%] heatmap-region bg-red-500 opacity-50 rounded-full w-16 h-16 flex items-center justify-center">
+              <div class="absolute top-[25%] left-[20%] heatmap-region bg-red-500 opacity-50 rounded-full w-16 h-16 flex items-center justify-center">
                 <span class="tooltip tooltip-right" data-tip="USA - 120 Trends"></span>
               </div>
         
-              <div class="absolute top-[50%] left-[60%] heatmap-region bg-blue-500 opacity-50 rounded-full w-16 h-16 flex items-center justify-center">
+              <div class="absolute top-[30%] left-[70%] heatmap-region bg-blue-500 opacity-50 rounded-full w-16 h-16 flex items-center justify-center">
                 <span class="tooltip tooltip-left" data-tip="Banglaseh - 95 Trends"></span>
               </div>
             </div>
@@ -221,6 +221,38 @@
      <!-- Trend Tracker with Heatmap end -->
 
 
+     <!-- Fashion AR Try-On start -->
+      <section class="container mx-auto mt-2">
+        <!-- Webcam Feed -->
+  <div class="relative w-full max-w-3xl aspect-video border-2 border-gray-300 rounded-lg overflow-hidden">
+    <video id="webcam" autoplay playsinline class="w-full h-full object-cover"></video>
+    <canvas id="overlay" class="absolute inset-0"></canvas>
+  </div>
+
+  <!-- Controls -->
+  <div class="mt-6 space-y-4">
+    <!-- Accessory Selector -->
+    <div class="flex items-center gap-4">
+      <label class="font-bold">Accessories:</label>
+      <select id="accessory-selector" class="select select-bordered">
+        <option value="glasses">Glasses</option>
+        <option value="hat">Hat</option>
+        <option value="mustache">Mustache</option>
+      </select>
+    </div>
+
+    <!-- Color Picker -->
+    <div class="flex items-center gap-4">
+      <label class="font-bold">Color:</label>
+      <input id="color-picker" type="color" class="rounded w-10 h-10 border-none shadow" />
+    </div>
+
+    <!-- Share Button -->
+    <button id="share-button" class="btn btn-primary">Share Your Look</button>
+  </div>
+      </section>
+     <!-- Fashion AR Try-On end -->
+
    
 
 
@@ -228,6 +260,7 @@
      <script src="js/virtualWardrobe.js"></script>
      <script src="js/aIFashionAdvisor.js"></script>
      <script src="js/trandTrackerMap.js"></script>
+     <script src="js/tryfashionar.js"></script>
 
 </body>
 </html>
