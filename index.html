@@ -22,7 +22,11 @@
           filter: brightness(1.2);
           transition: filter 0.3s ease;
         }
+
+
       </style>
+
+     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
@@ -253,6 +257,68 @@
     </section>
     <!-- Fashion AR Try-On end -->
 
+    <!-- Runway show simulator start -->
+    <section>
+      <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-4">Runway Show Simulator</h1>
+
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <h2 class="text-lg font-semibold mb-2">Model Customization</h2>
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Height:</span>
+                    </label>
+                    <input type="range" id="height" min="160" max="190" value="175" step="5" class="range range-primary" />
+                </div>
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Body Type:</span>
+                    </label>
+                    <select id="bodyType" class="select select-primary">
+                        <option value="slim">Slim</option>
+                        <option value="athletic">Athletic</option>
+                        <option value="curvy">Curvy</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-lg font-semibold mb-2">Outfit Design</h2>
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Choose Outfit:</span>
+                    </label>
+                    <select id="outfit" class="select select-primary">
+                        <option value="dress">Dress</option>
+                        <option value="suit">Suit</option>
+                        <option value="casual">Casual</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Color:</span>
+                    </label>
+                    <input type="color" id="color" class="input input-bordered" />
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8">
+            <button id="startShow" class="btn btn-primary">Start Show</button>
+        </div>
+
+        <div class="mt-8">
+            <div class="bg-base-300 p-4 rounded-lg" id="runway">
+                <div class="model" id="model"></div>
+            </div>
+        </div>
+
+    </div>
+
+    </section>
+    <!-- Runway show simulator end -->
+
 
 
     <!-- footer  -->
@@ -314,6 +380,7 @@
      <script src="js/aIFashionAdvisor.js"></script>
      <script src="js/trandTrackerMap.js"></script>
      <script src="js/tryfashionar.js"></script>
+     <script src="js/runwayShowSimulator.js"></script>
 
 </body>
 </html>
