@@ -16,7 +16,7 @@ startButton.addEventListener('click', () => {
     if (bodyTypeSelect.value === 'athletic') {
         modelElement.style.width = '60px'; 
     } else {
-        modelElement.style.width = '50px'; 
+        modelElement.style.width = '40px'; 
     }
 
     // Update model outfit (simple example)

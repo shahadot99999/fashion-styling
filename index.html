@@ -269,7 +269,7 @@
                     <label class="label">
                         <span class="label-text">Height:</span>
                     </label>
-                    <input type="range" id="height" min="160" max="190" value="175" step="5" class="range range-primary" />
+                    <input type="range" id="height" min="120" max="190" value="175" step="5" class="range range-primary" />
                 </div>
                 <div class="form-control">
                     <label class="label">
@@ -319,6 +319,28 @@
     </section>
     <!-- Runway show simulator end -->
 
+    
+     <!-- Sustainable Fashion Tracker start -->
+     <section>
+     <div class="container mx-auto ">
+      <h1>Sustainable Fashion Tracker</h1>
+
+      <div>
+          <label for="brand">Brand:</label>
+          <input type="text" id="brand" placeholder="Enter Brand">
+      </div>
+      <div>
+          <label for="material">Material:</label>
+          <input type="text" id="material" placeholder="Enter Material">
+      </div>
+      <button onclick="calculateEcoScore()">Calculate Eco-Score</button>
+  
+      <div id="chartContainer"></div>
+  
+      
+     </div>
+     </section>
+      <!-- Sustainable Fashion Tracker end -->
 
 
     <!-- footer  -->
@@ -381,6 +403,7 @@
      <script src="js/trandTrackerMap.js"></script>
      <script src="js/tryfashionar.js"></script>
      <script src="js/runwayShowSimulator.js"></script>
+     <script src="js/sustainableFashionTracker.js"></script>
 
 </body>
 </html>
