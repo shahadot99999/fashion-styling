@@ -48,6 +48,6 @@ Fashion Fusion is a cutting-edge web application designed to revolutionize the f
 
 GitHub: https://github.com/shahadot99999/fashion-styling
 
-Live Project: 
+Live Project: https://fashion-styling.netlify.app
 
 
